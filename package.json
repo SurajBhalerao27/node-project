@@ -1,0 +1,21 @@
+{
+  "name": "node-backend-project",
+  "version": "1.0.0",
+  "description": "This is the full backend project of youtube with nodeJS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config src/index.js"
+  },
+  "author": "Suraj Bhalerao",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "pretier": "^0.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.4"
+  }
+}
