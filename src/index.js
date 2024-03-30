@@ -4,7 +4,20 @@ import connectDB from "./db/connection.js";
 dotenv.config({
     path: "./env"
 });
+
 connectDB()
+.then(()=>{
+    app.on((error)=>{
+        console.log("Error: ",error);
+    })
+    app.listen(process.env.PORT || 5000,()=>{
+        console.log("Server is running on port: ", process.env.PORT);
+    })
+})
+.catch((err)=>{
+    console.log("Error: ", err);
+    throw err;
+})
 
 
 
